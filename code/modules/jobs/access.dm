@@ -67,6 +67,8 @@
 /var/const/access_network = 67
 /var/const/access_cloning = 68 //Cloning room
 /var/const/access_energy_barrier = 69 //Spacepod energy barriers
+/var/const/access_desubber = 70
+/var/const/access_iaa = 71
 
 	//BEGIN CENTCOM ACCESS
 	/*Should leave plenty of room if we need to add more access levels.
