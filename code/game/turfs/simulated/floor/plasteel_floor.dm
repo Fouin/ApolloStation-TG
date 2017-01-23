@@ -51,16 +51,6 @@
 /turf/open/floor/plasteel/circuit/rcircuit/animated
 	icon_state = "rcircuitanim"
 
-
-
-/turf/open/floor/plasteel/loadingarea
-	icon_state = "loadingarea"
-/turf/open/floor/plasteel/loadingarea/dirty
-	icon_state = "loadingareadirty1"
-/turf/open/floor/plasteel/loadingarea/dirtydirty
-	icon_state = "loadingareadirty2"
-
-
 /turf/open/floor/plasteel/shuttle
 	icon_state = "shuttlefloor"
 	floor_tile = /obj/item/stack/tile/mineral/titanium //old shuttle floors so i don't have to change the map paths in this pr
@@ -74,7 +64,6 @@
 	icon_state = "shuttlefloor3"
 /turf/open/floor/plasteel/shuttle/purple
 	icon_state = "shuttlefloor5"
-
 /turf/open/floor/plasteel/airless/shuttle
 	icon_state = "shuttlefloor"
 /turf/open/floor/plasteel/airless/shuttle/red
@@ -86,7 +75,6 @@
 	icon_state = "shuttlefloor3"
 /turf/open/floor/plasteel/airless/shuttle/purple
 	icon_state = "shuttlefloor5"
-
 
 /turf/open/floor/plasteel/asteroid
 	icon_state = "asteroidfloor"
@@ -110,26 +98,11 @@
 	icon_state = "cult"
 	name = "engraved floor"
 
-/turf/open/floor/plasteel/vaporwave
-	icon_state = "pinkblack"
-
-/turf/open/floor/plasteel/goonplaque
-	icon_state = "plaque"
-	name = "Commemorative Plaque"
-	desc = "\"This is a plaque in honour of our comrades on the G4407 Stations. Hopefully TG4407 model can live up to your fame and fortune.\" Scratched in beneath that is a crude image of a meteor and a spaceman. The spaceman is laughing. The meteor is exploding."
-
 /turf/open/floor/plasteel/cult/narsie_act()
 	return
 
 /turf/open/floor/plasteel/cult/airless
 	initial_gas_mix = "TEMP=2.7"
-
-/turf/open/floor/plasteel/stage_bottom
-	icon_state = "stage_bottom"
-/turf/open/floor/plasteel/stage_left
-	icon_state = "stage_left"
-/turf/open/floor/plasteel/stage_bleft
-	icon_state = "stage_bleft"
 
 /turf/open/floor/plasteel/stairs
 	icon_state = "stairs"
@@ -156,18 +129,10 @@
 /turf/open/floor/plasteel/bluespace
 	icon_state = "bluespace"
 
-/turf/open/floor/plasteel/sepia
-	icon_state = "sepia"
-
-/turf/open/floor/plasteel/sandy
-	icon_state = "sandy"
-	baseturf = /turf/open/floor/plating/beach/sand
-
 /turf/open/floor/plasteel/sandeffect
 	icon_state = "sandeffect"
 
-/turf/open/floor/plasteel/sandeffect/warning
-	icon_state = "warningsandeffect"
-
-/turf/open/floor/plasteel/sandeffect/warning/corner
-	icon_state = "warningsandeffectcorners"
+//Roads
+/turf/open/floor/plasteel/road
+	name = "road"
+	icon_state = "road"

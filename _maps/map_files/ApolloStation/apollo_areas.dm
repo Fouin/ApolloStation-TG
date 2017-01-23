@@ -705,9 +705,9 @@
 		icon_state = "engineering_locker"
 
 
-/area/engine/construction
-		name = "\improper Engineering Construction Zone"
-		icon_state = "engineering_workshop"
+/area/engine/gravity
+		name = "\improper Gravity Generator Control Room"
+		icon_state = "engineering"
 
 
 /area/storage/tech
