@@ -39,10 +39,11 @@
 		return
 
 	user.unEquip(lace) // doesn't seem to be any drop_item for the inactive hand so ???
-	target.internal_organs += lace
-	lace.loc = null
+	lace.Insert(target)
 
 	user << "<span class='notice'>You successfully attach the neural lace to [target]'s [parse_zone(target_zone)]!</span>"
+
+	// mind transfer bit
 
 	if(isnull(lace.stored_mind))
 		return
