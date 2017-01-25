@@ -2022,4 +2022,9 @@
 #include "interface\interface.dm"
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
+#include "modules_apollo\neural_lace\cloning.dm"
+#include "modules_apollo\neural_lace\humans.dm"
+#include "modules_apollo\neural_lace\neural_lace.dm"
+#include "modules_apollo\neural_lace\surgery\lace_extraction.dm"
+#include "modules_apollo\neural_lace\surgery\lace_implantation.dm"
 // END_INCLUDE
