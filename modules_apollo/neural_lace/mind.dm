@@ -6,5 +6,5 @@
 	..() // run original transfer_to
 
 	var/obj/item/organ/neural_lace/lace = new_character.getorgan(/obj/item/organ/neural_lace)
-	if(!isnull(lace))									// update the mind stored within neural laces
+	if(lace)									// update the mind stored within neural laces
 		lace.stored_mind = src
