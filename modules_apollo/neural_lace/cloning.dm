@@ -2,7 +2,7 @@
 
 
 // DNA scanner console
-/obj/machinery/computer/cloning/proc/scan_mob(mob/living/carbon/human/subject)
+/obj/machinery/computer/cloning/scan_mob(mob/living/carbon/human/subject)
 	if (!istype(subject))
 		scantemp = "<font class='bad'>Unable to locate valid genetic data.</font>"
 		playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, 0)
@@ -68,8 +68,12 @@
 	scantemp = "Subject successfully scanned."
 	playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
 
+// Defined in code/game/machinery/cloning.dm
+
+#define CLONE_INITIAL_DAMAGE 190
+
 // Cloning pod
-/obj/machinery/clonepod/proc/growclone(ckey, clonename, ui, se, mindref, datum/species/mrace, list/features, factions)
+/obj/machinery/clonepod/growclone(ckey, clonename, ui, se, mindref, datum/species/mrace, list/features, factions)
 	if(panel_open)
 		return FALSE
 	if(mess || attempting)
@@ -147,3 +151,5 @@
 		H.suiciding = FALSE
 	attempting = FALSE
 	return TRUE
+
+#undef CLONE_INITIAL_DAMAGE

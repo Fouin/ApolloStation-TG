@@ -2,10 +2,9 @@
 	name = "neural lace extraction"
 	steps = list(/datum/surgery_step/incise, /datum/surgery_step/retract_skin, /datum/surgery_step/drill, /datum/surgery_step/extract_lace, /datum/surgery_step/close)
 	possible_locs = list("head")
-	var/obj/item/organ/neural_lace/lace = null
 
 /datum/surgery/lace_extraction/can_start(mob/user, mob/living/carbon/target)
-	lace = target.getorgan(/obj/item/organ/neural_lace)
+	var/obj/item/organ/neural_lace/lace = target.getorgan(/obj/item/organ/neural_lace)
 
 	if(isnull(lace))
 		return 0
@@ -33,5 +32,7 @@
 	return 0
 
 /datum/surgery_step/extract_lace/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
+	var/obj/item/organ/neural_lace/lace = target.getorgan(/obj/item/organ/neural_lace)
+
 	target.internal_organs += lace
 	lace.loc = target.loc
