@@ -44,10 +44,12 @@
 
 	user << "<span class='notice'>You successfully attach the neural lace to [target]'s [parse_zone(target_zone)]!</span>"
 
-	// is someone using the body already? does the lace even have a mind stored?
+	// is someone using the body already? is the lace "owner" even dead?
 	if(isnull(lace.stored_mind))
 		return
 	else if(target.mind && target.mind.active)
+		return
+	else if(lace.stored_mind.active) // you have to leave your body for a transfer
 		return
 
 	lace.stored_mind.transfer_to(target)
