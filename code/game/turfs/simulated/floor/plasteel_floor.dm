@@ -463,5 +463,5 @@
 	icon_state = "warningsandeffectcorners"
 
 /turf/open/floor/plasteel/stairs
-	icon = 'icons/turf/stairs.dmi'
+	//icon = 'icons/turf/stairs.dmi'
 	icon_state = "rampbottom"
