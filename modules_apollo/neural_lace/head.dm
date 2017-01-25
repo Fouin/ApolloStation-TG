@@ -9,9 +9,14 @@
 
 	// this has to be done before brainmob is nulled by the brain being dropped
 	var/obj/item/organ/neural_lace/lace = locate() in src
-	if(isnull(lace.stored_mind))
-		lace.stored_mind = brainmob.mind
-	lace.loc = T
+	if(lace)
+		if(isnull(lace.stored_mind))
+			lace.stored_mind = brainmob.mind
+		lace.loc = T
+
+		C << "<span class='warning'><b>Your neural lace has been removed!</b> \
+			If you are revived through neural lace transplantation \
+			you can only remember events up to this point.</span>"
 
 	for(var/obj/item/I in src)
 		if(I == brain)
