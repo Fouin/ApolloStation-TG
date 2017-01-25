@@ -16,7 +16,8 @@
 
 /obj/item/organ/neural_lace/Insert(mob/living/carbon/M, special = 0)
 	..()
-	stored_mind = M.mind
+	if(isnull(stored_mind) && !isnull(M.mind))
+		stored_mind = M.mind
 
 /obj/item/organ/neural_lace/Remove(mob/living/carbon/C, special = 0)
 	..()
