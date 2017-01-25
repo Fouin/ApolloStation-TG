@@ -6,6 +6,13 @@
 	var/turf/T = get_turf(src)
 	if(status != BODYPART_ROBOTIC)
 		playsound(T, 'sound/misc/splort.ogg', 50, 1, -1)
+
+	// this has to be done before brainmob is nulled by the brain being dropped
+	var/obj/item/organ/neural_lace/lace = locate() in src
+	if(isnull(lace.stored_mind))
+		lace.stored_mind = brainmob.mind
+	lace.loc = T
+
 	for(var/obj/item/I in src)
 		if(I == brain)
 			if(user)
@@ -18,12 +25,5 @@
 			brain.loc = T
 			brain = null
 			update_icon_dropped()
-		else if(istype(I, /obj/item/organ/neural_lace))
-			var/obj/item/organ/neural_lace/lace = I
-
-			if(isnull(lace.stored_mind))
-				lace.stored_mind = brainmob.mind
-
-			lace.loc = T
 		else
 			I.loc = T
