@@ -32,9 +32,22 @@
 	return 0
 
 /datum/surgery_step/implant_lace/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-	var/obj/item/organ/neural_lace/lace = target.getorgan(/obj/item/organ/neural_lace)
+	var/obj/item/organ/neural_lace/lace = user.get_inactive_held_item()
 
+	if(!istype(lace))
+		user << "<span class='notice'>You revv up the lace claw but realize you don't actually have a neural lace in your offhand.</span>"
+		return
+
+	user.unEquip(lace) // doesn't seem to be any drop_item for the inactive hand so ???
 	target.internal_organs += lace
 	lace.loc = null
 
-	lace.stored_dna = target.dna
+	user << "<span class='notice'>You successfully attach the neural lace to [target]'s [parse_zone(target_zone)]!</span>"
+
+	// is someone using the body already? does the lace even have a mind stored?
+	if(isnull(lace.stored_mind))
+		return
+	else if(target.mind && target.mind.active)
+		return
+
+	lace.stored_mind.transfer_to(target)

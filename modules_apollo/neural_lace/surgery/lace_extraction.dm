@@ -34,5 +34,13 @@
 /datum/surgery_step/extract_lace/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	var/obj/item/organ/neural_lace/lace = target.getorgan(/obj/item/organ/neural_lace)
 
-	target.internal_organs += lace
+	// grab user's mind on extraction
+	// this is fine because the lace is usually spawned with the mob setup, and stored_dna is useless until now
+	// exceptions to this are caught in the implant surgery
+	if(isnull(lace.stored_mind))
+		lace.stored_mind = target.mind
+
+	target.internal_organs -= lace
 	lace.loc = target.loc
+
+	user << "<span class='notice'>You successfully remove the neural lace from [target]'s [parse_zone(target_zone)]!</span>"

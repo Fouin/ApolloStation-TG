@@ -11,7 +11,7 @@
 	slot = "neurallace"
 	origin_tech = "biotech=6;programming=3;engineering=4"
 	attack_verb = list("attacked", "slapped", "whacked")
-	var/datum/dna/stored_dna = null //SOMETHING that stores the lace owner's character data for cloning
+	var/datum/mind/stored_mind = null
 	var/severed = 0 // whether or not the lace is severed/broken
 
 // Neural lace extraction/implant tool
