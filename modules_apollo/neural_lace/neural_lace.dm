@@ -23,7 +23,7 @@
 	icon_state = "lacetool"
 	var/mode = 0 // 0 = extract, 1 = implant
 
-/obj/item/weapon/lace_claw/attack_hand(mob/user)
+/obj/item/weapon/lace_claw/attack_self(mob/user)
 	user << "<span class='notice'>You toggle the lace claw to [mode ? "extract" : "implant"] mode.</span>"
 	desc = "A precision instrument used to handle neural laces without breaking them. It is set to [mode ? "extract" : "implant"] mode."
 	mode = !mode
