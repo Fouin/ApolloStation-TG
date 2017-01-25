@@ -14,9 +14,9 @@
 			lace.stored_mind = brainmob.mind
 		lace.loc = T
 
-		C << "<span class='warning'><b>Your neural lace has been removed!</b> \
-			If you are revived through neural lace transplantation \
-			you can only remember events up to this point.</span>"
+		brainmob << "<span class='warning'><b>Your neural lace has been removed!</b> \
+					If you are revived through neural lace transplantation \
+					you can only remember events up to this point.</span>"
 
 	for(var/obj/item/I in src)
 		if(I == brain)
