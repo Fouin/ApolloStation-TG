@@ -44,12 +44,15 @@
 
 	user << "<span class='notice'>You successfully attach the neural lace to [target]'s [parse_zone(target_zone)]!</span>"
 
-	// is someone using the body already? is the lace "owner" even dead?
 	if(isnull(lace.stored_mind))
 		return
-	else if(target.mind && target.mind.active)
+	else if(target.mind && target.mind.active) // is the body already occupied by some other mind?
 		return
-	else if(lace.stored_mind.active) // you have to leave your body for a transfer
+	else if(lace.stored_mind.current && lace.stored_mind.current.stat != DEAD) // you have to be at least dead for a transfer
 		return
 
 	lace.stored_mind.transfer_to(target)
+
+	if(lace.stored_mind.current.get_ghost())
+		lace.stored_mind.current << "<span class='notice'>Your mind has been uploaded to a new body through your neural lace! \
+									You can now reenter your new body.</span>"

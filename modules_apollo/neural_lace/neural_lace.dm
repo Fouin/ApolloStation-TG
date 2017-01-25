@@ -14,6 +14,15 @@
 	var/datum/mind/stored_mind = null
 	var/severed = 0 // whether or not the lace is severed/broken
 
+/obj/item/organ/neural_lace/Remove(mob/living/carbon/C, special = 0)
+	..()
+	if(isnull(stored_mind))
+		stored_mind = C.mind
+
+	C << "<span class='warning'><b>Your neural lace has been removed!</b> \
+		If you are revived through neural lace transplantation \
+		you can only remember events up to this point.</span>"
+
 // Neural lace extraction/implant tool
 
 /obj/item/weapon/lace_claw
