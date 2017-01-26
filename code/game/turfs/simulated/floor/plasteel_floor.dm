@@ -382,6 +382,9 @@
 	icon_state = "cult"
 	name = "engraved floor"
 
+/turf/open/floor/plasteel/vaporwave
+	icon_state = "pinkblack"
+
 /turf/open/floor/plasteel/goonplaque
 	icon_state = "plaque"
 	name = "Commemorative Plaque"
@@ -435,6 +438,13 @@
 
 /turf/open/floor/plasteel/bluespace
 	icon_state = "bluespace"
+
+/turf/open/floor/plasteel/sepia
+	icon_state = "sepia"
+
+/turf/open/floor/plasteel/sandy
+	icon_state = "sandy"
+baseturf = /turf/open/floor/plating/beach/sand
 
 /turf/open/floor/plasteel/sandeffect
 	icon_state = "sandeffect"
