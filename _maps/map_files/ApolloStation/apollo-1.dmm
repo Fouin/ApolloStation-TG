@@ -3025,7 +3025,7 @@
 "bgi" = (/obj/machinery/atmospherics/pipe/simple/supply/hidden,/turf/open/floor/plating,/area/maintenance/fore_starboard)
 "bgj" = (/obj/structure/closet/crate/freezer,/turf/open/floor/plasteel/freezer,/area/medical/surgerystorage)
 "bgk" = (/obj/effect/landmark{name = "blobstart"},/turf/open/floor/plasteel/freezer,/area/medical/surgerystorage)
-"bgl" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,/obj/machinery/light{dir = 1},/turf/open/floor/plasteel/freezer,/area/medical/surgerystorage)
+"bgl" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,/obj/machinery/light{dir = 1},/obj/structure/rack,/obj/item/weapon/lace_claw,/turf/open/floor/plasteel/freezer,/area/medical/surgerystorage)
 "bgm" = (/obj/machinery/atmospherics/components/unary/vent_pump{dir = 1},/obj/structure/cable/green{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/open/floor/plasteel/freezer,/area/medical/surgerystorage)
 "bgn" = (/obj/structure/cable/green{d2 = 8; icon_state = "0-8"},/obj/machinery/power/apc{dir = 4; name = "east bump"; pixel_x = 24},/obj/structure/closet/secure_closet/medical2,/turf/open/floor/plasteel/freezer,/area/medical/surgerystorage)
 "bgo" = (/turf/closed/wall,/area/rnd/test_area)
