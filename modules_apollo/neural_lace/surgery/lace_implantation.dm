@@ -47,10 +47,15 @@
 
 	if(isnull(lace.stored_mind))
 		return
-	else if(target.mind && target.mind.active) // is the body already occupied by some other mind?
+	if(lace.stored_mind.current && lace.stored_mind.current.stat != DEAD) // you have to be at least dead for a transfer
 		return
-	else if(lace.stored_mind.current && lace.stored_mind.current.stat != DEAD) // you have to be at least dead for a transfer
-		return
+	if(target.mind && target.mind.active) // is the body already occupied by some other mind?
+		target.visible_message("<span class='danger'>\The [target] spasms violently!</span>")
+		if(prob(75))
+			target << "<span class='danger'>You manage to fight off the mind creeping over your own!</span>"
+			return
+		else
+			target << "<span class='danger'>You slip out of consciousness as a different mind takes over.</span>"
 
 	lace.stored_mind.transfer_to(target)
 
