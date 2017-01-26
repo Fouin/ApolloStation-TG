@@ -290,7 +290,6 @@
 /turf/open/floor/plasteel/loadingarea/dirtydirty
 	icon_state = "loadingareadirty2"
 
-
 /turf/open/floor/plasteel/shuttle
 	icon_state = "shuttlefloor"
 	floor_tile = /obj/item/stack/tile/mineral/titanium //old shuttle floors so i don't have to change the map paths in this pr
@@ -304,7 +303,6 @@
 	icon_state = "shuttlefloor3"
 /turf/open/floor/plasteel/shuttle/purple
 	icon_state = "shuttlefloor5"
-
 /turf/open/floor/plasteel/airless/shuttle
 	icon_state = "shuttlefloor"
 /turf/open/floor/plasteel/airless/shuttle/red
@@ -316,7 +314,6 @@
 	icon_state = "shuttlefloor3"
 /turf/open/floor/plasteel/airless/shuttle/purple
 	icon_state = "shuttlefloor5"
-
 
 /turf/open/floor/plasteel/asteroid
 	icon_state = "asteroidfloor"
@@ -393,16 +390,12 @@
 	name = "Commemorative Plaque"
 	desc = "\"This is a plaque in honour of our comrades on the G4407 Stations. Hopefully TG4407 model can live up to your fame and fortune.\" Scratched in beneath that is a crude image of a meteor and a spaceman. The spaceman is laughing. The meteor is exploding."
 
+
 /turf/open/floor/plasteel/cult/narsie_act()
 	return
 
 /turf/open/floor/plasteel/cult/airless
 	initial_gas_mix = "TEMP=2.7"
-
-
-
-
-
 
 //
 //unused? remove?
@@ -456,12 +449,13 @@
 /turf/open/floor/plasteel/sandeffect
 	icon_state = "sandeffect"
 
+//Roads
+/turf/open/floor/plasteel/road
+	name = "road"
+	icon_state = "road"
+
 /turf/open/floor/plasteel/sandeffect/warning
 	icon_state = "warningsandeffect"
 
 /turf/open/floor/plasteel/sandeffect/warning/corner
 	icon_state = "warningsandeffectcorners"
-
-/turf/open/floor/plasteel/stairs
-	//icon = 'icons/turf/stairs.dmi'
-	icon_state = "rampbottom"
