@@ -20,8 +20,9 @@ var/list/floor_decals = list()
 	if(newcolour)
 		color = newcolour
 	..(newloc)
+	initialize()
 
-/obj/effect/floor_decal/initialize()
+/obj/effect/floor_decal/proc/initialize()
 	if(supplied_dir)
 		setDir(supplied_dir)
 	var/turf/T = get_turf(src)

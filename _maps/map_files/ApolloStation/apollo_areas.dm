@@ -270,7 +270,7 @@
 
 /area/medical/hallway_aft
 	name = "\improper Medbay Hallway - Aft"
-	icon_state = "medbay4"
+	icon_state = "medbay3"
 
 /area/medical/biostorage
 	name = "\improper Secondary Storage"
@@ -348,6 +348,10 @@
 	name = "\improper Pre-Op Prep Room"
 	icon_state = "surgery"
 
+/area/medical/surgerystorage
+	name = "\improper Surgery Freezer Room"
+	icon_state = "surgery"
+
 /area/medical/cryo
 	name = "\improper Cryogenics"
 	icon_state = "cryo"
@@ -408,10 +412,6 @@
 	name = "\improper Research Break Room"
 	icon_state = "research"
 
-/area/rnd/docking
-	name = "\improper Research Dock"
-	icon_state = "research_dock"
-
 /area/rnd/lab
 	name = "\improper Research Lab"
 	icon_state = "toxlab"
@@ -464,10 +464,6 @@
 /area/turret_protected/ai_upload_foyer
 	name = "AI Upload Access"
 	icon_state = "ai_foyer"
-
-/area/turret_protected/ai_server_room
-	name = "AI Server Room"
-	icon_state = "ai_server"
 
 /area/turret_protected/ai
 	name = "\improper AI Chamber"
@@ -564,6 +560,10 @@
 	name = "\improper Custodial Closet"
 	icon_state = "janitor"
 
+/area/janitor/secondary
+	name = "\improper Secondary Custodial Closet"
+	icon_state = "janitor"
+
 /area/hydroponics
 	name = "\improper Hydroponics"
 	icon_state = "hydro"
@@ -612,9 +612,21 @@
 	name = "\improper Podbay"
 	icon_state = "yellow"
 
-/area/podbay/hangar
-	name = "\improper Hangar"
+/area/hangar/A
+	name = "\improper Hangar A"
 	icon_state = "green"
+
+/area/hangar/B
+	name = "\improper Hangar B"
+	icon_state = "green"
+
+/area/hangar
+	name = "\improper Central Hangar"
+	icon_state = "green"
+
+/area/hangar/base_construction
+	name = "\improper Auxiliary Base Construction"
+	icon_state = "yellow"
 
 /area/hallway/secondary/exit
 	name = "\improper Departures Lobby"
@@ -771,7 +783,7 @@
 
 /area/maintenance/engineering
 	name = "Engineering Maintenance"
-	icon_state = "maint_engineering"
+	icon_state = "fpmaint"
 
 /area/maintenance/central_port
 	name = "Central Port Maintenance"
