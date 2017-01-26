@@ -444,7 +444,7 @@
 
 /turf/open/floor/plasteel/sandy
 	icon_state = "sandy"
-baseturf = /turf/open/floor/plating/beach/sand
+	baseturf = /turf/open/floor/plating/beach/sand
 
 /turf/open/floor/plasteel/sandeffect
 	icon_state = "sandeffect"
