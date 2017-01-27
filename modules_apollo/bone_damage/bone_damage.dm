@@ -18,9 +18,9 @@
 /obj/item/bodypart/proc/rattle_bones()
 	if(!broken)
 		return
-	if(prob(brute_dam))
-		owner << "<span class='danger'>The bones in your [name] moves around painfully!</span>"
-		owner.emote("scream")
+
+	owner << "<span class='danger'>The bones in your [name] move around painfully!</span>"
+	owner.emote("scream")
 	owner.staminaloss += 10
 
 /obj/item/bodypart/proc/fracture()
@@ -51,3 +51,8 @@
 
 	if(brute >= break_damage)
 		fracture()
+
+// chest pain is pretty fuckin shit. make it give some extra staminaloss
+/obj/item/bodypart/chest/rattle_bones()
+	..()
+	owner.staminaloss += 15
