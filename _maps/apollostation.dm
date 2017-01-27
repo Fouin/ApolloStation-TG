@@ -5,7 +5,6 @@
 		#define MINETYPE "lavaland"
 
 		#include "map_files\ApolloStation/apollo_areas.dm"
-
         #include "map_files\ApolloStation/apollo-1.dmm"
         #include "map_files\generic\z2.dmm"
         #include "map_files\generic\z3.dmm"
