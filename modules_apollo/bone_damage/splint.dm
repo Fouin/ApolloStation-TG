@@ -3,6 +3,7 @@
 
 /obj/item/stack/medical/splint
 	name = "medical splint"
+	singular_name = "medical splint"
 	desc = "For supporting and keeping limbs with bone fractures still, preventing further injury."
 	icon_state = "splint"
 	amount = 5
