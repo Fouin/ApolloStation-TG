@@ -24,9 +24,9 @@
 	. = brute_dam / 50
 	if(broken)
 		if(splinted)
-			. += 1.5
+			. += 2
 		else
-			. += 4
+			. += 5
 
 /obj/item/bodypart/l_leg/on_mob_move()
 	if(splinted)
@@ -40,9 +40,9 @@
 	. = brute_dam / 50
 	if(broken)
 		if(splinted)
-			. += 1.5
+			. += 2
 		else
-			. += 4
+			. += 5
 
 /obj/item/bodypart/r_leg/on_mob_move()
 	if(splinted)
