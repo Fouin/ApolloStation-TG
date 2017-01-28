@@ -70,6 +70,6 @@
 	var/obj/item/bodypart/B = target.get_bodypart(target_zone)
 	B.fracture()
 
-	user.visible_message("<span class='danger'>[user] breaks the bones [target]'s [parse_zone(target_zone)] into pieces!</span>",
-		"<span class='danger'>You break the bones [target]'s [parse_zone(target_zone)] into pieces.</span>")
+	user.visible_message("<span class='danger'>[user] shatters the bones [target]'s [parse_zone(target_zone)] into pieces!</span>",
+		"<span class='danger'>You shatter the bones [target]'s [parse_zone(target_zone)] into pieces.</span>")
 	return 1

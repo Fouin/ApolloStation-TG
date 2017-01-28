@@ -30,11 +30,11 @@
 
 	broken = 1
 	owner.visible_message( // ty for the messages bay
-		"<span class='danger'>You hear a loud cracking sound coming from \the [owner]'s [name].</span>",
+		"<span class='danger'>You hear a loud cracking sound coming from \the [owner].</span>",
 		"<span class='danger'>Something feels like it shattered in your [name]!</span>",
 		"<span class='danger'>You hear a sickening crack.</span>")
 	// overriding get_sfx didn't work :(
-	playsound(owner.loc, pick('sound/effects/bonebreak1.ogg','sound/effects/bonebreak2.ogg','sound/effects/bonebreak3.ogg','sound/effects/bonebreak4.ogg'), 100, -2)
+	playsound(owner.loc, pick('sound/effects/bonebreak1.ogg','sound/effects/bonebreak2.ogg','sound/effects/bonebreak3.ogg','sound/effects/bonebreak4.ogg'), 100)
 	owner.emote("scream")
 
 /obj/item/bodypart/proc/heal_fracture()
