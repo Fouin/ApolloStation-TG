@@ -2030,6 +2030,7 @@
 #include "modules_apollo\bone_damage\bone_damage.dm"
 #include "modules_apollo\bone_damage\bone_effects.dm"
 #include "modules_apollo\bone_damage\splint.dm"
+#include "modules_apollo\bone_damage\machinery\sleeper.dm"
 #include "modules_apollo\neural_lace\cloning.dm"
 #include "modules_apollo\neural_lace\humans.dm"
 #include "modules_apollo\neural_lace\mind.dm"
