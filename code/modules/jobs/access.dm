@@ -69,6 +69,7 @@
 /var/const/access_energy_barrier = 69 //Spacepod energy barriers
 /var/const/access_desubber = 70
 /var/const/access_iaa = 71
+/var/const/access_fax = 72 //Fax machines
 
 	//BEGIN CENTCOM ACCESS
 	/*Should leave plenty of room if we need to add more access levels.
@@ -248,7 +249,7 @@
 	            access_theatre, access_research, access_mining, access_mailsorting, access_weapons,
 	            access_heads_vault, access_mining_station, access_xenobiology, access_ce, access_hop, access_hos, access_RC_announce,
 	            access_keycard_auth, access_tcomsat, access_gateway, access_mineral_storeroom, access_minisat, access_network, access_cloning,
-	            access_energy_barrier, access_desubber, access_iaa)
+	            access_energy_barrier, access_desubber, access_iaa, access_fax)
 
 /proc/get_all_centcom_access()
 	return list(access_cent_general, access_cent_thunder, access_cent_specops, access_cent_medical, access_cent_living, access_cent_storage, access_cent_teleporter, access_cent_captain)
@@ -445,6 +446,8 @@
 			return "Internal Affairs"
 		if(access_desubber)
 			return "Desublimation Lab"
+		if(access_fax)
+			return "Fax Machines"
 
 /proc/get_centcom_access_desc(A)
 	switch(A)

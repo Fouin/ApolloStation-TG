@@ -2030,6 +2030,7 @@
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
 #include "modules_apollo\misc\ashtray.dm"
+#include "modules_apollo\misc\faxmachine.dm"
 #include "modules_apollo\misc\hobo_barrel.dm"
 #include "modules_apollo\neural_lace\cloning.dm"
 #include "modules_apollo\neural_lace\humans.dm"
