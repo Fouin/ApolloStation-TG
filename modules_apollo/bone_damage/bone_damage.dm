@@ -42,8 +42,7 @@
 		return
 
 	broken = 0
-	if(splinted)
-		splinted = 0
+	splinted = 0
 
 /obj/item/bodypart/receive_damage(brute, burn, updating_health = 1)
 	. = ..()
