@@ -3,12 +3,14 @@
 */
 
 /mob/living/carbon/fully_heal(admin_revive = 0)
-	for(var/obj/item/bodypart/B in getFractures())
+	for(var/X in getFractures())
+		var/obj/item/bodypart/B = X
 		B.heal_fracture()
 	..()
 
 /mob/living/carbon/proc/getFractures()
 	. = list()
-	for(var/obj/item/bodypart/B in bodyparts)
+	for(var/X in bodyparts)
+		var/obj/item/bodypart/B = X
 		if(B.broken)
 			. += B

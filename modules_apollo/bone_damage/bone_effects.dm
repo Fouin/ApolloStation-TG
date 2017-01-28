@@ -12,7 +12,8 @@
 	if(!.)
 		return 0
 
-	for(var/obj/item/bodypart/B in bodyparts)
+	for(var/X in bodyparts)
+		var/obj/item/bodypart/B = X
 		B.on_mob_move()
 
 /obj/item/bodypart/proc/movement_delay()
