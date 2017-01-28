@@ -22,18 +22,32 @@
 // i cba to fix that
 /obj/item/bodypart/l_leg/movement_delay()
 	. = brute_dam / 50
-	. += (broken ? 4 : 0)
+	if(broken)
+		if(splinted)
+			. += 1.5
+		else
+			. += 4
 
 /obj/item/bodypart/l_leg/on_mob_move()
-	if(broken && prob(5))
+	if(splinted)
+		return
+
+	if(broken && prob(2))
 		rattle_bones()
 		owner.Weaken(2)
 
 /obj/item/bodypart/r_leg/movement_delay()
 	. = brute_dam / 50
-	. += (broken ? 4 : 0)
+	if(broken)
+		if(splinted)
+			. += 1.5
+		else
+			. += 4
 
 /obj/item/bodypart/r_leg/on_mob_move()
-	if(broken && prob(5))
+	if(splinted)
+		return
+
+	if(broken && prob(2))
 		rattle_bones()
 		owner.Weaken(2)

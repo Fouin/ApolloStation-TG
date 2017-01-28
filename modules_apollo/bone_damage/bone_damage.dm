@@ -8,6 +8,7 @@
 	// NB! v must be >= 9. the receive_damage override is reliant on update_bodypart_damage_state() returning 1, which happens every 9 damage
 	var/break_damage = 15 // must deal at least this much damage in one hit to guarantee a fracture
 	var/broken = 0 // broken bones?
+	var/splinted = 0 // is the limb splinted
 
 /obj/item/bodypart/head
 	break_damage = 20
@@ -41,6 +42,8 @@
 		return
 
 	broken = 0
+	if(splinted)
+		splinted = 0
 
 /obj/item/bodypart/receive_damage(brute, burn, updating_health = 1)
 	. = ..()
