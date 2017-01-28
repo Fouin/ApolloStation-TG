@@ -41,14 +41,14 @@
 		user.visible_message("<span class='danger'>[user] starts to apply the splint to [M]'s [limb].</span>", "<span class='danger'>You start to apply the splint to [M]'s [limb].</span>", "<span class='danger'>You hear something being wrapped.</span>")
 	else
 		if((user.active_hand_index == HAND_L && istype(affecting, /obj/item/bodypart/l_arm)) || \
-			(user.active_hand_index == HAND_R && istype(affecting, /obj/item/bodypart/r_arm))
+			(user.active_hand_index == HAND_R && istype(affecting, /obj/item/bodypart/r_arm)))
 			user << "<span class='danger'>You cannot apply a splint to the hand you're using!</span>"
 			return
 		user.visible_message("<span class='danger'>[user] starts to apply the splint to their [limb].</span>", "<span class='danger'>You start to apply the splint to your [limb].</span>", "<span class='danger'>You hear something being wrapped.</span>")
 
 	if(do_after(user, self_delay, target = M))
 		if(M == user && prob(75))
-			user.visible_message("<span class='danger'>[user] fumbles with the splint.</span>", "<span class='danger'>You fumble with the [splint].</span>", "<span class='danger'>You hear something being wrapped.</span>")
+			user.visible_message("<span class='danger'>[user] fumbles with the splint.</span>", "<span class='danger'>You fumble with the splint.</span>", "<span class='danger'>You hear something being wrapped.</span>")
 			return
 
 		use(1)
