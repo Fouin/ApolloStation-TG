@@ -61,3 +61,6 @@
 		return
 
 	user.visible_message("<span class='danger'>[user] fails to apply a splint to [M]'s [limb]!</span>", "<span class='danger'>You fail to apply a splint to [M]'s [limb]!</span>", "<span class='danger'>You hear something being wrapped.</span>")
+
+#undef HAND_L
+#undef HAND_R
