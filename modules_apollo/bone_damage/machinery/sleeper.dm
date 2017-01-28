@@ -25,13 +25,11 @@
 		data["occupant"]["fireLoss"] = occupant.getFireLoss()
 		data["occupant"]["cloneLoss"] = occupant.getCloneLoss()
 		data["occupant"]["brainLoss"] = occupant.getBrainLoss()
-		data["occupant"]["boneFractures"] = list() // since only carbons have bodyparts this would be an ugly proc anyways
+		data["occupant"]["boneFractures"] = list()
 		if(iscarbon(occupant))
 			var/mob/living/carbon/C = occupant
-
-			for(var/obj/item/bodypart/B in C.bodyparts)
-				if(B.broken)
-					data["occupant"]["boneFractures"] += list(list("name" = B.name))
+			for(var/obj/item/bodypart/B in C.getFractures())
+				data["occupant"]["boneFractures"] += list(list("name" = B.name))
 		data["occupant"]["reagents"] = list()
 		if(occupant.reagents.reagent_list.len)
 			for(var/datum/reagent/R in occupant.reagents.reagent_list)
