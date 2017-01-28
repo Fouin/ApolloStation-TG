@@ -1,6 +1,6 @@
 /obj/structure/hobo_barrel
 	name = "hobo barrel"
-	icon = 'hobo_barrel.dmi'
+	icon = 'icons/obj/hobo_barrel.dmi'
 	icon_state = "off"
 	desc = "A cold piece of cylindrical metal."
 	var/obj/structure/hobo_barrel/lit = 0
