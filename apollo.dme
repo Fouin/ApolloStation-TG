@@ -2038,4 +2038,6 @@
 #include "modules_apollo\neural_lace\neural_lace.dm"
 #include "modules_apollo\neural_lace\surgery\lace_extraction.dm"
 #include "modules_apollo\neural_lace\surgery\lace_implantation.dm"
+#include "modules_curie\yui\mob_steps.dm"
+#include "modules_curie\yui\mob_steps_define.dm"
 // END_INCLUDE
